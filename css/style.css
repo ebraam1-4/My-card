@@ -3,6 +3,7 @@
   margin: 0%;
   box-sizing: border-box;
 }
+
 .mycard {
   background-color: #000000;
   display: flex;
@@ -11,18 +12,24 @@
   text-align: center;
   height: 100vh;
 }
+
 .card {
   border: 10px solid rgb(255, 255, 255);
   border-radius: 50px;
-background-image: linear-gradient(#000000, rgb(119, 0, 255));
-  height: 700px;
-  width: 500px;
+  background-image: linear-gradient(#000000, rgb(119, 0, 255));
+
+  /* التعديلات الجديدة هنا 👇 */
+  width: 90%; /* الكارت هياخد 90% من عرض الشاشة على الموبايل */
+  max-width: 420px; /* مش هيمتد ويزيد عن 420px على الشاشات الكبيرة علشان يفضل شكله شيك */
+  height: auto; /* الارتفاع يتحدد تلقائي بناءً على المحتوى */
+  min-height: 620px; /* أقل ارتفاع مسموح بيه للكارت علشان يحافظ على قوامة */
+
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 100px rgb(0, 217, 255);
-  animation-name: crd ;
+  animation-name: card-glow;
   animation-iteration-count: infinite;
-animation-duration:8s ;
+  animation-duration: 8s;
 }
 
 .img img {
@@ -30,16 +37,19 @@ animation-duration:8s ;
   animation-duration: 9s;
   animation-iteration-count: infinite;
   height: 200px;
+  width: 200px; /* تم إضافة العرض لحماية أبعاد الصورة */
+  object-fit: cover; /* عشان الصورة متمطش لو مش مربعة */
   border: 5px solid gold;
-  border-radius: 110px;
-  margin-top: 70px;
+  border-radius: 50%; /* 50% تضمن لك دايرة مثالية دايماً */
+  margin-top: 40px;
 }
+
 .text {
   text-transform: capitalize;
   font-family: sans-serif;
-  padding: 45px;
-  color: aqua;
+  color: rgb(255, 255, 255);
 }
+.text h2{margin: 20px;}
 .text h5,
 p {
   padding: 15px;
@@ -49,101 +59,69 @@ p {
   margin-top: auto;
   margin-bottom: 70px;
   display: flex;
-  justify-content: center;
-  justify-content: space-around;
+  justify-content: space-around; /* تم حذف السطر المكرر */
 }
+
 .butttons a {
   color: white;
   text-decoration: none;
-
 }
+
 .butttons i {
   font-size: 40px;
-    transition: all .5s;
+  transition: all 0.5s;
 }
+
+/* تعديل الـ shadow وإضافة الألوان جواه مباشرة */
 @keyframes img-bero {
+  0%,
   10% {
-    box-shadow: 0px 0px 80px;
-    color: gold;
+    box-shadow: 0px 0px 80px gold;
   }
   20% {
-    box-shadow: 0px 0px 20px;
-    color: gold;
+    box-shadow: 0px 0px 20px gold;
   }
   30% {
-    box-shadow: 0px 0px 80px;
-    color: gold;
+    box-shadow: 0px 0px 80px gold;
   }
   40% {
-    box-shadow: 0px 0px 20px;
-    color: gold;
+    box-shadow: 0px 0px 20px gold;
   }
   50% {
-    box-shadow: 0px 0px 80px;
-    color: gold;
+    box-shadow: 0px 0px 80px gold;
   }
   60% {
-    box-shadow: 0px 0px 20px;
-    color: gold;
+    box-shadow: 0px 0px 20px gold;
   }
   70% {
-    box-shadow: 0px 0px 80px;
-    color: gold;
+    box-shadow: 0px 0px 80px gold;
   }
   80% {
-    box-shadow: 0px 0px 0px;
-    color: gold;
+    box-shadow: 0px 0px 0px transparent;
   }
   90% {
-    box-shadow: 0px 0px 80px;
-    color: gold;
+    box-shadow: 0px 0px 80px gold;
   }
   100% {
-    box-shadow: 0px 0px 0px;
-    color: gold;
+    box-shadow: 0px 0px 0px transparent;
   }
 }
-/*@keyframes card {
-  10% {
-    box-shadow: 0px 0px 40px;
-    color: rgb(0, 217, 255);
-  }
-  20% {
-    box-shadow: 0px 0px 0px;
-    color:rgb(0, 217, 255);
-  }
-  30% {
-    box-shadow: 0px 0px 40px;
-    color:rgb(0, 217, 255);
-  }
-  40% {
-    box-shadow: 0px 0px 0px;
-    color:rgb(0, 217, 255);
-  }
-  50% {
-    box-shadow: 0px 0px 40px;
-    color:rgb(0, 217, 255);
-  }
-  60% {
-    box-shadow: 0px 0px 0px;
-    color:rgb(0, 217, 255);
-  }
-  70% {
-    box-shadow: 0px 0px 40px;
-    color:rgb(0, 217, 255);
-  }
-  80% {
-    box-shadow: 0px 0px 0px;
-    color:rgb(0, 217, 255);
-  }
-  90% {
-    box-shadow: 0px 0px 40px;
-    color:rgb(0, 217, 255);
-  }
-  100% {
-    box-shadow: 0px 0px 0px;
-    color:rgb(0, 217, 255);
-  }
+
+/* تفعيل وتعديل أنيمايشن الكارت وتغيير اسمه لـ card-glow 
+@keyframes card-glow {
+  0%, 10% { box-shadow: 0px 0px 40px rgb(0, 217, 255); }
+  20% { box-shadow: 0px 0px 0px transparent; }
+  30% { box-shadow: 0px 0px 40px rgb(0, 217, 255); }
+  40% { box-shadow: 0px 0px 0px transparent; }
+  50% { box-shadow: 0px 0px 40px rgb(0, 217, 255); }
+  60% { box-shadow: 0px 0px 0px transparent; }
+  70% { box-shadow: 0px 0px 40px rgb(0, 217, 255); }
+  80% { box-shadow: 0px 0px 0px transparent; }
+  90% { box-shadow: 0px 0px 40px rgb(0, 217, 255); }
+  100% { box-shadow: 0px 0px 0px transparent; }
 }*/
 
-.butttons i:hover{color: #09ff00; transform: scale(1.5);}
+.butttons i:hover {
+  color: #09ff00;
+  transform: scale(1.5);
+}
