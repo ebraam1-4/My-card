@@ -49,11 +49,14 @@
   font-family: sans-serif;
   color: rgb(255, 255, 255);
 }
-.text h2{margin: 20px;}
+.text h2 {
+  margin: 30px;
+}
 .text h5,
 p {
   padding: 15px;
 }
+
 
 .butttons {
   margin-top: auto;
