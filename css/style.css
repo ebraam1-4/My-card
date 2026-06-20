@@ -1,4 +1,3 @@
-
 * {
   padding: 0%;
   margin: 0%;
@@ -27,7 +26,7 @@
 
   display: flex;
   flex-direction: column;
-  box-shadow: 10px 10px 100px rgb(0, 217, 255);
+  box-shadow: 10px 10px 100px yellow;
   animation-name: card-glow;
   animation-iteration-count: infinite;
   animation-duration: 8s;
