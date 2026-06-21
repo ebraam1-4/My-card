@@ -61,6 +61,13 @@ p {
   padding: 20px;
 }
 
+.call-me {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 25px;}
+
 .butttons {
   margin-top: auto;
   margin-bottom: 70px;
