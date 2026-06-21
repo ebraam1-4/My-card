@@ -26,7 +26,7 @@
 
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 70px rgb(0, 140, 160);
+  box-shadow: 0px 0px 100px rgb(0, 140, 160);
   animation-name: card-glow;
   animation-iteration-count: infinite;
   animation-duration: 8s;
