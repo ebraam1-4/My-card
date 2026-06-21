@@ -47,9 +47,9 @@
 .text {
   text-transform: capitalize;
   font-family: sans-serif;
-  color: gold;
+  color: white;
 }
-.text h1 {rgb(255, 255, 255);
+.text h1 {
   margin-top: 30px;
 }
 .text h5,
