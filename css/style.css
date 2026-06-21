@@ -120,7 +120,7 @@ p {
   }
 }
 
-/* تفعيل وتعديل أنيمايشن الكارت وتغيير اسمه لـ card-glow 
+ 
 @keyframes card-glow {
   0%, 10% { box-shadow: 0px 0px 40px rgb(0, 217, 255); }
   20% { box-shadow: 0px 0px 0px transparent; }
