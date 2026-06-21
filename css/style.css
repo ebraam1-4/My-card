@@ -26,7 +26,7 @@
 
   display: flex;
   flex-direction: column;
-  box-shadow: 10px 10px 100px yellow;
+  box-shadow: rgb(0, 140, 160);
   animation-name: card-glow;
   animation-iteration-count: infinite;
   animation-duration: 8s;
@@ -49,7 +49,7 @@
   font-family: sans-serif;
   color: gold;
 }
-.text h1 {color: rgb(238, 180, 34);
+.text h1 {rgb(255, 255, 255);
   margin-top: 30px;
 }
 .text h5,
